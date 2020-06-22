@@ -1,7 +1,16 @@
 body{
-    
+    margin: 0;
 }
 
+@font-face{
+    font-family: 'ForName';
+    src: url('./DeLaFuente.ttf')
+}
+
+@font-face{
+    font-family: 'ForSlug';
+    src: url('./Fibon_Sans_Regular.otf')
+}
 
 
 #column-hold{
@@ -12,12 +21,45 @@ body{
 /*  Brief CV  */
 
 #column1{
-    position: relative
+   height: 100vh;
+    
+}
+
+#column1-content{
+    height: inherit;
+    width: 50vw;
+    padding: 45px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
 }
 
 #name{
-    position: fixed;
-    color: blue;
+    
+    font-family: 'ForName';
+    font-size: 5em;
+    height: 100px;
+}
+
+#slug-line{
+    width: 100%;
+    font-family: 'ForSlug';
+    font-size: 2em;
+    margin-left: 10px
+}
+
+#skills-list{
+    list-style: none;
+}
+
+#skills-list li{
+
+}
+
+#skills-list li:first-of-type{
+    color: red;
+    text-decoration: underline;
+    margin-bottom: 5px;
 }
 
 
@@ -40,10 +82,10 @@ body{
      
 }
 
-#Dr-Mario-Background{
+#dr-mario-background{
     height: inherit;
     width: 100%;
-    background: url(./Screen\ Shot\ 2020-06-22\ at\ 10.51.18\ AM.png);
+    background: url(./dr-mario-ss.png);
     background-position-x: center;
 }
 
@@ -59,3 +101,4 @@ body{
 ::-webkit-scrollbar {
     display: none;
   }
+
