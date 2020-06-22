@@ -3,30 +3,48 @@ body{
 }
 
 
-h1{
-    position: fixed;
-    color: blue;
-}
 
 #column-hold{
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
+/*  Brief CV  */
+
 #column1{
     position: relative
 }
 
+#name{
+    position: fixed;
+    color: blue;
+}
+
+
+
+
+/* Project Slides */
 #column2{
-    ;
+    
 }
 
 .project-slide{
-    height: 800px;
+    height: 110vh;
+}
+
+.project-wrapper{
+    height: inherit;
 }
 
 #project1{
-    background: cornflowerblue;
+     
+}
+
+#Dr-Mario-Background{
+    height: inherit;
+    width: 100%;
+    background: url(./Screen\ Shot\ 2020-06-22\ at\ 10.51.18\ AM.png);
+    background-position-x: center;
 }
 
 #project2{
