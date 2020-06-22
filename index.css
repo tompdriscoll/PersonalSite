@@ -26,40 +26,55 @@ body{
 }
 
 #column1-content{
-    height: inherit;
+    height: calc(100% - 90px);
     width: 50vw;
     padding: 45px;
     position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
-#name{
-    
+#name-slug{
+
+}
+
+
+
+#name{  
     font-family: 'ForName';
     font-size: 5em;
     height: 100px;
 }
 
 #slug-line{
-    width: 100%;
+    width: 450px;
     font-family: 'ForSlug';
     font-size: 2em;
-    margin-left: 10px
+    margin-left: 10px;
+    line-height: 40px;
 }
 
 #skills-list{
     list-style: none;
+    padding-left: 10px;
 }
 
 #skills-list li{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 21px;
+}
 
+#skills-list li:hover{
+    cursor: default;
 }
 
 #skills-list li:first-of-type{
-    color: red;
+    
     text-decoration: underline;
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 
