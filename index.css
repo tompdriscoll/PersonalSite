@@ -1,0 +1,43 @@
+body{
+    
+}
+
+
+h1{
+    position: fixed;
+    color: blue;
+}
+
+#column-hold{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#column1{
+    position: relative
+}
+
+#column2{
+    ;
+}
+
+.project-slide{
+    height: 800px;
+}
+
+#project1{
+    background: cornflowerblue;
+}
+
+#project2{
+    background: darksalmon
+}
+
+#project3{
+    background: aquamarine;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
