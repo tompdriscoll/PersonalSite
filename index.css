@@ -15,7 +15,8 @@ body{
 
 #column-hold{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50% 50%;
+    transition: 1s cubic-bezier(0, -0.55, 0.265, 1.55);
 }
 
 /*  Brief CV  */
@@ -42,9 +43,13 @@ body{
 
 
 #name{  
+    animation: 2s ease-in-out animate;
     font-family: 'ForName';
     font-size: 5em;
     height: 100px;
+    overflow: hidden;
+    transform-origin: left;
+    
 }
 
 #slug-line{
@@ -119,3 +124,17 @@ body{
     display: none;
   }
 
+@keyframes animate{
+    0%{
+       width: 78px; 
+       overflow-wrap: anywhere;
+    }
+
+    1%{
+        overflow-wrap: normal;
+    }
+
+    100%{
+        width: inherit; 
+    }
+}
