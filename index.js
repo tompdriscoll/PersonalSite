@@ -55,13 +55,21 @@ window.addEventListener('DOMContentLoaded', () => {
     Array.from(projects).forEach( project => {
         project.addEventListener('click', (e)=> {
             let scrollY = e.currentTarget.offsetTop 
+            let delay = Math.abs(scrollY - window.scrollY) - 200
+    
             window.scrollTo({
                 top: scrollY,
                 behavior: 'smooth'
             })
+            disableScroll()
+            
+            let shiftLeft = function (){
             col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
             col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
-            disableScroll()
+            }
+
+            setTimeout(shiftLeft, delay)
+
             console.log('fishy')
         })
     })
