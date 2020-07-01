@@ -15,8 +15,7 @@ body{
 
 #column-hold{
     display: grid;
-    transition: .745s cubic-bezier(0.5, 0, 0.1, 1);
-    
+    transition: .745s cubic-bezier(0.5, 0, 0.1, 1);   
 }
 
 .column-pos-1{
@@ -58,7 +57,6 @@ body{
     height: 100px;
     overflow: hidden;
     transform-origin: left;
-    
 }
 
 #slug-line{
@@ -100,7 +98,7 @@ body{
     transition: .745s cubic-bezier(0.5, 0, 0.1, 1);
 }
 
-.project-slide{
+.project-slide, .description-slide{
     height: 110vh;
 }
 
@@ -117,8 +115,7 @@ body{
     width: 100%;
     background: url(./dr-mario-ss.png) no-repeat;
     background-size: cover;
-    background-position-x: center ;
-    
+    background-position-x: center ; 
 }
 
 #project2{
