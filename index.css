@@ -16,6 +16,7 @@ body{
 #column-hold{
     display: grid;
     transition: .745s cubic-bezier(0.5, 0, 0.1, 1);   
+    overflow-x: hidden;
 }
 
 .column-pos-1{
@@ -51,7 +52,7 @@ body{
 
 
 #name{  
-    animation: 2s ease-in-out animate;
+    animation: 2s ease-in-out animate ;
     font-family: 'ForName';
     font-size: 5em;
     height: 100px;
@@ -146,6 +147,10 @@ body{
     right: 3vw;
 }
 
+.descrip-x:hover{
+    cursor: pointer;
+}
+
 .description-content{
     width: 25vw;
     height: inherit;
@@ -174,16 +179,17 @@ body{
 
 @keyframes animate{
     0%{
-       width: 78px; 
-       overflow-wrap: anywhere;
+       width: 42px; 
+       overflow-wrap: break-word;
     }
 
-    1%{
+    12%{
         overflow-wrap: normal;
+        width: 42px;
     }
 
     100%{
-        width: inherit; 
+        width: 700px; 
     }
 }
 

@@ -43,6 +43,13 @@ window.addEventListener('DOMContentLoaded', () => {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
+    function shiftRight(){
+        details = false
+        col2.style.transform = 'translate3d(0vw, 0px, 0px)'
+        col3.style.transform = 'translate3d(0vw, 0px, 0px)'
+        enableScroll()
+    }
+
 
 
     // Grabbing Elements for Animation
@@ -50,13 +57,12 @@ window.addEventListener('DOMContentLoaded', () => {
     let xs = document.getElementsByClassName('descrip-x')
     let col2 = document.getElementById('column2')
     let col3 = document.getElementById('column3')
-   
+    let details = false
 
     Array.from(projects).forEach( project => {
         project.addEventListener('click', (e)=> {
             let scrollY = e.currentTarget.offsetTop 
             let delay = Math.abs(scrollY - window.scrollY) - 200
-    
             window.scrollTo({
                 top: scrollY,
                 behavior: 'smooth'
@@ -64,21 +70,25 @@ window.addEventListener('DOMContentLoaded', () => {
             disableScroll()
             
             let shiftLeft = function (){
-            col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
-            col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
+                col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
+                col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
             }
 
-            setTimeout(shiftLeft, delay)
+            if (!details){   
+                setTimeout(shiftLeft, delay)
+                details = true
+            } 
+            else {
+                shiftRight()
+            }
+            
 
             console.log('fishy')
         })
     })
     Array.from(xs).forEach(x => {
         x.addEventListener('click', () => {
-            console.log('sup')
-            enableScroll()
-            col2.style.transform = 'translate3d(0vw, 0px, 0px)'
-            col3.style.transform = 'translate3d(0vw, 0px, 0px)'
+            shiftRight()
         })
     })
 })
