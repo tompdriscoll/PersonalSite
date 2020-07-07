@@ -133,7 +133,7 @@ body{
 }
 
 
-/* Description SLides */
+/* Description Slides */
 
 #column3 {
     z-index: 3;
@@ -164,13 +164,24 @@ body{
 .description-text{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 21px;
+    font-size: 36px;
 }
 
 .description-links a{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 24px;
+    text-decoration: none;
+}
+
+.description-links::after{
+    content: "";
+    width: 100px;
+    background: blue;
+}
+
+.description-links a:hover{
+    
 }
 
 ::-webkit-scrollbar {

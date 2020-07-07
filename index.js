@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', () => {
     
     // Scroll Enabling and Disabling
@@ -50,6 +48,13 @@ window.addEventListener('DOMContentLoaded', () => {
         enableScroll()
     }
 
+    let shiftLeft = function (){
+        col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
+        col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
+        details = true
+        disableScroll()
+    }
+
 
 
     // Grabbing Elements for Animation
@@ -61,19 +66,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     Array.from(projects).forEach( project => {
         project.addEventListener('click', (e)=> {
+            
             let scrollY = e.currentTarget.offsetTop 
             let delay = Math.abs(scrollY - window.scrollY) - 200
+           
             window.scrollTo({
                 top: scrollY,
                 behavior: 'smooth'
             })
-            disableScroll()
             
-            let shiftLeft = function (){
-                col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
-                col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
-            }
-
             if (!details){   
                 setTimeout(shiftLeft, delay)
                 details = true
@@ -81,9 +82,6 @@ window.addEventListener('DOMContentLoaded', () => {
             else {
                 shiftRight()
             }
-            
-
-            console.log('fishy')
         })
     })
     Array.from(xs).forEach(x => {
