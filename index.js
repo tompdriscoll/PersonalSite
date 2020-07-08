@@ -49,10 +49,12 @@ window.addEventListener('DOMContentLoaded', () => {
         col3.style.transform = 'translate3d(0vw, 0px, 0px)'
         enableScroll()
     }
-
+    let shift = '-50vw'
+    
     let shiftLeft = function (){
-        col2.style.transform = 'translate3d(-50vw, 0px, 0px)'
-        col3.style.transform = 'translate3d(-50vw, 0px, 0px)'
+        if (window.innerWidth < 450) shift = '-100vw'
+        col2.style.transform = `translate3d(${shift}, 0px, 0px)`
+        col3.style.transform = `translate3d(${shift}, 0px, 0px)`
         details = true
         disableScroll()
     }
