@@ -49,13 +49,19 @@ body{
 
 }
 
-#name{  
-    animation: 2s ease-in-out animateName ;
+#name{      
     font-family: 'ForName';
     font-size: 5em;
-    height: 100px;
-    overflow: hidden;
+    display: flex;
+    width: 473px;
+    justify-content: center;
+}
+
+#animated-name{
     transform-origin: left;
+    overflow: hidden;
+    height: 100px;
+    animation: 2s ease-out animateName;   
 }
 
 #slug-line{
@@ -64,7 +70,7 @@ body{
     font-size: 2em;
     margin-left: 10px;
     line-height: 40px;
-    animation: 2s slideInFromBottom
+    animation: 2s slideInFromBottom;
 }
 
 #skills-list{
@@ -216,13 +222,7 @@ body{
 
 @keyframes animateName{
     0%{
-       width: 42px; 
-       overflow-wrap: break-word;
-    }
-
-    12%{
-        overflow-wrap: normal;
-        width: 42px;
+       width: 0px; 
     }
 
     100%{
@@ -250,7 +250,7 @@ body{
       transform: translateY(50%);
       opacity: 0;
     }
-    40% {
+    55% {
         transform: translateY(50%);
         opacity: 0;
       }
