@@ -64,6 +64,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let col3 = document.getElementById('column3')
     let details = false
 
+
+    // Adding animation to Project slides
     Array.from(projects).forEach( project => {
         project.addEventListener('click', (e)=> {
             
