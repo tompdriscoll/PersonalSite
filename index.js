@@ -41,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
+    // Description open & close animations
+
     function shiftRight(){
         details = false
         col2.style.transform = 'translate3d(0vw, 0px, 0px)'
@@ -63,6 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let col2 = document.getElementById('column2')
     let col3 = document.getElementById('column3')
     let details = false
+    let skills = document.getElementById('skills-list').children
 
 
     // Adding animation to Project slides
@@ -91,4 +94,14 @@ window.addEventListener('DOMContentLoaded', () => {
             shiftRight()
         })
     })
+
+    let delay = .7
+    Array.from(skills).forEach(skill => {
+        skill.style.transitionDelay = `${delay}s`
+        skill.style.transform = 'matrix(1,0,0,1,0,0)'
+        skill.style.opacity = 1
+        delay += .1
+    })
+
+
 })

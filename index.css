@@ -76,6 +76,9 @@ body{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 21px;
+    transition: 1s ease;
+    transform: matrix(1,0,0,1,100,0);
+    opacity: 0;
 }
 
 #skills-list li:hover{
@@ -239,7 +242,6 @@ body{
 
     100% {
       transform: translateX(0);
-      
     }
   }
 
@@ -251,6 +253,22 @@ body{
     40% {
         transform: translateY(50%);
         opacity: 0;
+      }
+
+    100% {
+      transform: translateX(0);
+      
+    }
+  }
+
+  @keyframes slideSkills {
+    0% {
+      transform: translateX(10%);
+      
+    }
+    40% {
+        transform: translateX(10%);
+        
       }
 
     100% {
