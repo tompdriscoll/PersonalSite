@@ -74,11 +74,20 @@ window.addEventListener('DOMContentLoaded', () => {
     Array.from(projects).forEach( project => {
         project.addEventListener('click', (e)=> {
             
-            let scrollY = e.currentTarget.offsetTop 
-            let delay = Math.abs(scrollY - window.scrollY) - 200
+            let element = e.currentTarget
+
+            let offsetTop = 0;
+            while(element) {
+                debugger
+                 offsetTop += element.offsetTop;
+                element = element.offsetParent;
+            }
+           
+
+            let delay = Math.abs(offsetTop - window.scrollY) - 200
            
             window.scrollTo({
-                top: scrollY,
+                top: offsetTop,
                 behavior: 'smooth'
             })
             
