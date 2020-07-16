@@ -8,7 +8,7 @@ body{
 }
 
 @font-face{
-    font-family: 'ForSlug';
+    font-family: 'Fibon';
     src: url('./Fibon_Sans_Regular.otf')
 }
 
@@ -58,7 +58,7 @@ body{
 
 #slug-line{
     width: 450px;
-    font-family: 'ForSlug';
+    font-family: 'Fibon';
     font-size: 2em;
     margin-left: 10px;
     line-height: 40px;
