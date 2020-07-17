@@ -104,12 +104,13 @@ body{
 }
 
 .project-slide, .description-slide{
-    height: 110vh;
+    height: 100vh;
 }
 
 .project-wrapper{
     height: inherit;
 }
+
 
 #project1{
      
@@ -121,6 +122,14 @@ body{
     background: url(./dr-mario-ss.png) no-repeat;
     background-size: cover;
     background-position-x: center ; 
+}
+
+#droppy-background{
+    height: inherit;
+    width: 100%;
+    background: url(./droppy.png) no-repeat;
+    background-size: cover;
+    background-position-x: center ;   
 }
 
 #project2{
@@ -157,7 +166,7 @@ body{
 
 .description-content{
     width: 25vw;
-    height: inherit;
+    height: 64vh;
     display: flex;
     flex-direction: column;
     margin:auto;
