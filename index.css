@@ -132,6 +132,14 @@ body{
     background-position-x: center ;   
 }
 
+#sys-background{
+    background: url(./sys.png) no-repeat;
+    height: inherit;
+    width: 100%;
+    background-size: cover;
+    background-position-x: center ;  
+}
+
 #project2{
     background: darksalmon
 }
