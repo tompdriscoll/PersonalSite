@@ -78,7 +78,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
             let offsetTop = 0;
             while(element) {
-                debugger
                  offsetTop += element.offsetTop;
                 element = element.offsetParent;
             }
@@ -98,6 +97,10 @@ window.addEventListener('DOMContentLoaded', () => {
             else {
                 shiftRight()
             }
+
+            Array.from(xs).forEach(x => {
+                x.classList.toggle('hidden')
+            })
         })
     })
     Array.from(xs).forEach(x => {
@@ -106,13 +109,16 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+ 
     let delay = .7
     Array.from(skills).forEach(skill => {
-        skill.style.transitionDelay = `${delay}s`
-        skill.style.transform = 'matrix(1,0,0,1,0,0)'
-        skill.style.opacity = 1
-        delay += .1
+
+    skill.style.transitionDelay = `${delay}s`
+    skill.style.transform = 'matrix(1,0,0,1,0,0)'
+    skill.style.opacity = 1
+    delay += .1
     })
 
-
 })
+
+

@@ -224,6 +224,10 @@ body{
     color: rgb(121, 121, 121);
 }
 
+.hidden{
+    opacity: 0;
+}
+
 ::-webkit-scrollbar {
     display: none;
   }
